@@ -1,0 +1,31 @@
+@import url('reset.css');
+@import url('poster.css');
+
+.box__poster{
+    --height: 560px;
+
+    width: 100%;
+    height: 560px;
+}
+.box__poster-placeholder {
+    animation: shimmer 2s linear infinite;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #DCDCDC 0%, #c4c4c4 35%, #dcdcdc 70%, #c4c4c4 100%);
+    background-size: calc(var(--height) * 3) 100%;
+    background-position: 0%;
+}
+.box__poster-placeholder .gradient {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}

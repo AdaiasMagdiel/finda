@@ -26,16 +26,16 @@ function createCard(image, title, genre) {
     let cardInfo = document.createElement('div');
     cardInfo.classList.add('card__info');
 
-    let cardGenre = document.createElement('p');
-    cardGenre.classList.add('card__genre');
-    cardGenre.innerText = genre;
-
     let cardTitle = document.createElement('h2');
     cardTitle.classList.add('card__title');
     cardTitle.innerText = title;
 
-    cardInfo.appendChild(cardGenre);
+    let cardGenre = document.createElement('p');
+    cardGenre.classList.add('card__genre');
+    cardGenre.innerText = genre;
+
     cardInfo.appendChild(cardTitle);
+    cardInfo.appendChild(cardGenre);
 
     card.appendChild(cardImage);
     card.appendChild(cardInfo);

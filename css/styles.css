@@ -1,5 +1,6 @@
 @import url('reset.css');
 @import url('poster.css');
+@import url('card.css');
 
 .box__poster{
     --height: 560px;
@@ -28,4 +29,19 @@
     100% {
         background-position: 100%;
     }
+}
+
+.box__carousel {
+    margin-top: -20px;
+}
+
+.box__card {
+    --card-width: 190px;
+    --card-height: calc(var(--card-width) * 1.412);
+
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    height: var(--card-height);
 }

@@ -12,6 +12,7 @@ Poster = {
 
         let posterImageImg = document.createElement('img');
         posterImageImg.src = image;
+        posterImageImg.alt = title;
 
         posterImage.appendChild(posterImageImg);
 
@@ -37,7 +38,6 @@ Poster = {
 
     async init() {
         let anime = await Anime.random();
-        console.log(anime.data.mal_id);
 
         let image = anime.data.images.webp.large_image_url;
         let title = anime.data.title;
